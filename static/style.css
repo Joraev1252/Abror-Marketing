@@ -1,0 +1,321 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/* Unversial_cods */
+section p {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 31px;
+  color: rgba(255, 255, 255, 1);
+  margin-top: 50px;
+}
+
+h3 {
+  padding-bottom: 100px;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 56px;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  padding-top: 80px;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 90px;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* header_starting */
+
+header {
+  background-color: rgba(0, 30, 64, 1);
+}
+
+header .navbar {
+  padding: 36px 0px;
+}
+
+header .navbar .logoLink {
+  display: none;
+}
+
+header .navbar .navbar-toggler {
+  border: 2px solid white !important;
+}
+
+header .navbar .navbar-toggler .fa {
+  color: white;
+}
+
+header li .nav-link {
+  color: rgba(255, 255, 255, 1);
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 33.5px;
+}
+
+header .photo {
+  height: 650px;
+}
+
+/* section_starting */
+
+section {
+  background-color: rgba(0, 30, 64, 1);
+}
+
+
+section h1 {
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 56px;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  margin-top: 80px;
+}
+
+section .text {
+  margin: auto;
+}
+
+section .imgBox {
+  margin-top: 70px;
+}
+
+section .end p {
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.img {
+  margin: auto;
+}
+.karousel .carousel-inner{
+max-width:100% !important;
+width:100% !important;
+height:400px !important;
+}
+
+.end .karousel {
+  padding-top: 50px;
+  margin: auto;
+}
+
+.end .karousel .part{
+  height: auto;
+}
+
+/* footer_starting */
+
+footer {
+  background-color: #001e40;
+  padding-top: 30px;
+}
+
+footer p {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 31px;
+  color: #ffffff;
+  margin-top: 20px;
+  transition: 2s;
+}
+
+footer p:hover {
+  font-size: 35px;
+  margin-top: 30px;
+  color: #009cdf;
+  text-align: left;
+}
+
+footer .img {
+  text-align: center;
+}
+
+footer .right p {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 31px;
+  color: #ffffff;
+  margin-top: 20px;
+  text-align: right;
+  transition: 2s;
+}
+
+footer .right p:hover {
+  font-size: 35px;
+  margin-top: 30px;
+  color: #009cdf;
+  text-align: right;
+}
+
+footer .under {
+  background-color: #009cdf;
+  width: 100%;
+}
+
+footer .under h2 {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 34px;
+  color: #ffffff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.under :nth-child(1) {
+  text-align: left;
+}
+
+.under :nth-child(2) {
+  text-align: right;
+}
+
+/* media_screen */
+
+/* xl - 1200  */
+
+/* lg - 1199px dan - 992px gacha */
+
+/* md - 991px dan - 768px gacha  */
+
+@media (max-width: 991px) {
+  header .navbar .logoLink {
+    display: block;
+    padding: 0;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+  }
+
+  header .navbar .lg-logo {
+    display: none;
+  }
+
+  section .imgBox {
+    text-align: center;
+  }
+
+  section p {
+    text-align: center;
+  }
+}
+
+/* sm - 767px dan - 576px gacha */
+
+@media (max-width: 767px) {
+  header .photo {
+    height: 500px;
+  }
+
+  section h3 {
+    font-size: 35px;
+    line-height: 46px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  section .end h2 {
+    font-size: 30px;
+    line-height: 70px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+
+  section .end p {
+    font-size: 20px;
+    line-height: 25px;
+    margin-top: 20px;
+  }
+
+  footer p {
+    font-size: 20px;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  footer .img {
+    margin: auto;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  footer .right p {
+    font-size: 20px;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  footer .under h2 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .under :nth-child(1) {
+    text-align: center;
+  }
+
+  .under :nth-child(2) {
+    text-align: center;
+  }
+}
+
+/* col/xs - 575px = 320px   dan - gacha */
+
+@media (max-width: 575px) {
+  header .photo {
+    height: 300px;
+  }
+
+  section {
+    padding-top: 20px;
+  }
+
+  section h3{
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0;
+  }
+
+  section .text p {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  section .end h2 {
+    font-size: 35px;
+    line-height: 50px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  section .end p {
+    font-size: 15px;
+    line-height: 22px;
+    margin-top: 0px;
+  }
+}

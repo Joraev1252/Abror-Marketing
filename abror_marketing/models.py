@@ -4,6 +4,16 @@ from django.db import models
 from django.urls import reverse
 
 
+class CategoriesModels(models.Model):
+    title1 = models.CharField(max_length=55)
+    title2 = models.CharField(max_length=55)
+    title3 = models.CharField(max_length=55)
+    title4 = models.CharField(max_length=55)
+
+    def __str__(self):
+        return str(self.title1)
+
+
 def upload_location(instance, filename):
     ext = filename.split('.')[-1]
     file_path = "images/{filename}".format(
@@ -27,6 +37,21 @@ class BusinessSmmModel(models.Model):
 
     def __str__(self):
         return str(self.title)
+
+
+class MainLogoModel(models.Model):
+    image = models.ImageField(upload_to=upload_location, blank=True, null=True)
+
+    @property
+    def imageURL(self):
+        try:
+            url = str(self.image.url)
+        except:
+            url = ''
+        return url
+
+    def __str__(self):
+        return str(self.pk)
 
 
 class TargetingModel(models.Model):
@@ -114,6 +139,20 @@ class CarouselModel(models.Model):
 
     def __str__(self):
         return str(self.pk)
+
+
+class ServicesModel(models.Model):
+    service1 = models.CharField(max_length=55)
+    service2 = models.CharField(max_length=55)
+    service3 = models.CharField(max_length=55)
+    service4 = models.CharField(max_length=55)
+    service5 = models.CharField(max_length=55)
+    service6 = models.CharField(max_length=55)
+    service7 = models.CharField(max_length=55)
+
+    def __str__(self):
+        return str(self.pk)
+
 
 
 

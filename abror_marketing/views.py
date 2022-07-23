@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from abror_marketing.models import BusinessSmmModel, TargetingModel, LogoRoleModel, OurProjectsModel, ContactModel, CarouselModel
+from abror_marketing.models import BusinessSmmModel, TargetingModel, LogoRoleModel, OurProjectsModel, ContactModel, CarouselModel, CategoriesModels, ServicesModel, MainLogoModel
 
 
 def abror_view(request):
@@ -7,15 +7,21 @@ def abror_view(request):
     business = BusinessSmmModel.objects.all()
     target = TargetingModel.objects.all()
     logo = LogoRoleModel.objects.all()
+    main_logo = MainLogoModel.objects.all()
     projects = OurProjectsModel.objects.all()
     contact = ContactModel.objects.all()
     carousel = CarouselModel.objects.all()
+    categories = CategoriesModels.objects.all()
+    services = ServicesModel.objects.all()
     context['business'] = business
     context['target'] = target
     context['logo'] = logo
     context['projects'] = projects
     context['contact'] = contact
     context['carousel'] = carousel
+    context['categories'] = categories
+    context['services'] = services
+    context['main_logo'] = main_logo
     print(context['carousel'])
     a = (len(context['carousel']))
     context['carousel_count'] = a

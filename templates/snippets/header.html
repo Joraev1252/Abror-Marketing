@@ -4,7 +4,7 @@
     <div class="container">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a href="./index.html" class="nav-link logoLink ">
+          <a href="{% url 'abror_marketing:abror_marketing' %}" class="nav-link logoLink ">
             <img class="logo" src="{% static 'img/лого аброр 1.png' %}" alt="">
           </a>
           <button class="navbar-toggler bg-transparent" type="button" data-bs-toggle="collapse"
@@ -13,30 +13,30 @@
             <i class="fa fa-bars"></i>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav w-100 justify-content-between">
-              <li class="nav-item">
-                <a class="nav-link" href="#information">Информация</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#projects">Проекты</a>
-              </li>
+            <ul class="navbar-nav w-100 justify-content-between align-items-center">
               <li class="nav-item lg-logo">
-                <a href="index.html" class="nav-link">
+                <a href="" class="nav-link">
                   <img class="logo" src="{% static 'img/лого аброр 1.png' %}" alt="">
                 </a>
+              {% for i in categories %}
+              <li class="nav-item">
+                <a class="nav-link" href="#information">{{ i.title1 }}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Партнеры</a>
+                <a class="nav-link" href="#projects">{{ i.title2 }}</a>
+              </li>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#number">Контакты</a>
+                <a class="nav-link" href="#">{{ i.title3 }}</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#number">{{ i.title4 }}</a>
+              </li>
+              {% endfor %}
               <li class="language">
-                <button><a href="http://abror-marketing.herokuapp.com/en/">en</a></button>
-                <button><a href="http://abror-marketing.herokuapp.com/ru/">ru</a></button>
-                <button><a href="http://abror-marketing.herokuapp.com/uz/">uz</a></button>
-              </li>
-              <li>
+                <a href="http://localhost:8000/en/">en</a>
+                <a href="http://localhost:8000/ru/">ru</a>
+                <a href="http://abror-marketing.herokuapp.com/uz/">uz</a>
               </li>
             </ul>
           </div>
@@ -44,7 +44,9 @@
       </nav>
 
       <div>
-        <img class="photo col-12" src="{% static 'img/abror.jpg' %}" alt="">
+        {% for i in main_logo %}
+        <img class="photo col-12" src="{{ i.imageURL }}" alt="">
+        {% endfor %}
       </div>
 
 

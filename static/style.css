@@ -15,13 +15,14 @@ section p {
   margin-top: 50px;
 }
 
-.language button {
-    border: none;
-    background: white;
+.language a {
     color: #001E40;
-    padding: 10px;
-    align-items: center;
+    background-color:white;
+    margin-left: 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
    }
+
 
 h3 {
   padding-bottom: 100px;
@@ -176,7 +177,7 @@ footer .right p:hover {
 }
 
 footer .under {
-  background-color: #009cdf;
+  border-top:5px solid #f1f1f1 !important;
   width: 100%;
 }
 
